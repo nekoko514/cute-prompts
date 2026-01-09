@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neruneru's Pop Prompts</title>
+<link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;800&display=swap" rel="stylesheet">
+<style>
+/* 全体のデザイン：水玉模様と丸っこい文字 /
+body {
+font-family: 'M PLUS Rounded 1c', sans-serif;
+background-color: #fff0f5;
+background-image: radial-gradient(#ffb6c1 3px, transparent 3px);
+background-size: 25px 25px;
+margin: 0;
+padding: 20px;
+color: #555;
+}
+/ タイトル：ポップなピンク /
+h1 {
+text-align: center;
+color: #ff69b4;
+font-size: 1.8rem;
+text-shadow: 2px 2px 0px #fff;
+margin-bottom: 30px;
+}
+/ カード：ふわっとした白 /
+.prompt-card {
+background: white;
+border-radius: 20px;
+padding: 20px;
+margin-bottom: 25px;
+box-shadow: 0 4px 15px rgba(255, 105, 180, 0.2);
+border: 3px solid #ffe4e1;
+}
+/ 小見出し /
+.prompt-title {
+font-weight: 800;
+margin-bottom: 10px;
+color: #ff8da1;
+font-size: 1.1rem;
+display: flex;
+align-items: center;
+}
+.prompt-title::before {
+content: '♥';
+margin-right: 5px;
+color: #ff69b4;
+}
+/ テキストエリア：書き込み欄 /
+textarea {
+width: 100%;
+height: 80px;
+background: #fffafa;
+border: 2px dashed #ffb6c1;
+border-radius: 15px;
+padding: 10px;
+font-family: 'M PLUS Rounded 1c', sans-serif;
+font-size: 0.9rem;
+color: #666;
+resize: none;
+box-sizing: border-box; / 枠からはみ出さないおまじない /
+}
+/ ボタン：ぷるんとした動き /
+button {
+background-color: #ff69b4;
+color: white;
+border: none;
+padding: 12px;
+width: 100%;
+border-radius: 50px;
+margin-top: 10px;
+font-weight: bold;
+font-size: 1rem;
+cursor: pointer;
+transition: transform 0.1s;
+box-shadow: 0 4px 0 #db4c93; / 立体的な影 /
+}
+button:active {
+transform: translateY(4px); / 押したときに凹む */
+box-shadow: none;
+}
+</style>
+</head>
+<body>
+<h1>NERUNERU PROMPTS ♡</h1>
+<div class="prompt-card">
+<div class="prompt-title">アラスター召喚</div>
+<textarea readonly id="p1">You are Alastor from Hazbin Hotel. Please speak in Japanese with a theatrical, polite but slightly sinister tone.</textarea>
+<button onclick="copyText('p1')">✨ コピーする！</button>
+</div>
+<div class="prompt-card">
+<div class="prompt-title">ゴスロリ少女生成</div>
+<textarea readonly id="p2">1girl, solo, masterpiece, best quality, wearing gothic lolita dress, red eyes, silver hair, frills, cute pose</textarea>
+<button onclick="copyText('p2')">✨ コピーする！</button>
+</div>
+<script>
+function copyText(id) {
+var copyText = document.getElementById(id);
+copyText.select();
+copyText.setSelectionRange(0, 99999);
+try {
+document.execCommand("copy");
+alert("コピーしました♡\n" + copyText.value.substring(0, 10) + "...");
+} catch (err) {
+alert("手動でコピーしてね💦");
+}
+}
+</script>
+</body>
+</html>
